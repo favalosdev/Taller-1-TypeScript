@@ -2,6 +2,7 @@ import { dataCourses } from "./dataCourses.js";
 var coursesTbody = document.getElementById('courses'); // Nodo tbody que tiene el id="courses"
 var inputSearchBox = document.getElementById('search-box');
 var btnfilterByName = document.getElementById('button-filterByName');
+var totalCreditsField = document.getElementById('total-credits');
 function renderCoursesInTable(courses) {
     courses.forEach(function (c) {
         var trElement = document.createElement("tr");
@@ -19,12 +20,16 @@ function clearCoursesInTable() {
         coursesTbody.removeChild(coursesTbody.lastElementChild);
     }
 }
+function updateTotalCredits(totalCredits) {
+    totalCreditsField.innerHTML = '' + totalCredits;
+}
 function applyFilterByName() {
     var text = inputSearchBox.value;
     text = (text == null) ? '' : text;
     clearCoursesInTable();
     var coursesFiltered = searchCourseByName(text, dataCourses);
     renderCoursesInTable(coursesFiltered);
+    updateTotalCredits(getTotalCredits(coursesFiltered));
 }
 function searchCourseByName(nameKey, courses) {
     return nameKey === '' ? dataCourses : courses.filter(function (c) {
