@@ -27,27 +27,7 @@
                                     <th socpe="col"></th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Código</td>
-                                    <td>201911468</td>
-                                </tr>
-                                <tr>
-                                    <td>Cédula</td>
-                                    <td>1000589519</td>
-                                </tr>
-                                <tr>
-                                    <td>Edad</td>
-                                    <td>19 años</td>
-                                </tr>
-                                <tr>
-                                    <td>Dirección</td>
-                                    <td>Carrera 2 #74-15</td>
-                                </tr>
-                                <tr>
-                                    <td>Teléfono</td>
-                                    <td>3164917357</td>
-                                </tr>
+                            <tbody id="student">
                             </tbody>
                         </table>
                     </div>
@@ -67,6 +47,24 @@
                                 <div class="col">
                                     <button type="button" id="button-filterByName"
                                         class="btn btn-success">Aplicar</button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <form style="margin:10px;">
+                            <div class="form-row">
+                                <div class="col">
+                                    <input type="text" class="form-control" id="min-bound-box"
+                                        placeholder="Ingresar valor mínimo">
+                                </div>
+                            </div>
+                        </form>
+
+                        <form style="margin:10px;">
+                            <div class="form-row">
+                                <div class="col">
+                                    <input type="text" class="form-control" id="max-bound-box"
+                                        placeholder="Ingresar valor máximo">
                                 </div>
                             </div>
                         </form>
@@ -93,6 +91,8 @@
     <script type="module" src="./scripts/course.js"></script>
     <script type="module" src="./scripts/dataCourses.js"></script>
     <script type="module" src="./scripts/main.js"></script>
+    <script type="module" src="./scripts/student.js"></script>
+    <script tyep="module" src="./scripts/dataStudent.js"></script>
 </body>
 
 </html>
